@@ -1,0 +1,15 @@
+[Unit]
+Description=Prysm ETH2 Validator
+Wants=network-online.target
+After=network-online.target
+
+[Service]
+User=prysmvalidator
+Group=prysmvalidator
+Type=simple
+Restart=always
+RestartSec=5
+ExecStart=/usr/local/bin/validator --datadir=/var/lib/prysm/validator --wallet-dir=/var/lib/prysm/validator --wallet-password-file=/var/lib/prysm/validator/unicorn --graffiti="nra" --accept-terms-of-use
+
+[Install]
+WantedBy=multi-user.target
