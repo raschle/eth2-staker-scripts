@@ -35,6 +35,9 @@ sudo ./06_InstallMonitoring.sh
 ### Service check
 
 ```
+sudo systemctl status geth
+sudo journalctl -fu geth.service
+
 sudo systemctl status prysmbeacon
 sudo journalctl -fu prysmbeacon.service
 
@@ -43,6 +46,19 @@ sudo journalctl -fu prysmvalidator.service
 
 sudo systemctl status prometheus
 sudo systemctl status node_exporter
+```
+
+### go-ethereum checks
+Check Sync Status
+```
+geth attach http://127.0.0.1:8545
+> eth.syncing
+```
+
+Check Connected Peers
+```
+geth attach http://127.0.0.1:8545
+> net.peerCount
 ```
 
 ### Grafana
