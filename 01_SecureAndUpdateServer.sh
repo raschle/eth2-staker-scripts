@@ -9,6 +9,7 @@ adduser $1
 usermod -aG sudo $1
 sudo apt update -y && sudo apt upgrade -y
 sudo apt dist-upgrade -y && sudo apt autoremove -y
+sudo apt-get install software-properties-common
 
 sudo apt install -y ufw
 sudo ufw default deny incoming
