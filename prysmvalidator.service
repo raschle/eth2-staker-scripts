@@ -9,7 +9,7 @@ Group=prysmvalidator
 Type=simple
 Restart=always
 RestartSec=5
-ExecStart=/usr/local/bin/validator --datadir=/var/lib/prysm/validator --wallet-dir=/var/lib/prysm/validator --wallet-password-file=/var/lib/prysm/validator/unicorn --graffiti="nra" --accept-terms-of-use
+ExecStart=/usr/local/bin/validator --datadir=/var/lib/prysm/validator --wallet-dir=/var/lib/prysm/validator --wallet-password-file=/var/lib/prysm/validator/unicorn --graffiti="nra" --enable-db-backup-webhook --db-backup-output-dir=/var/lib/prysm/validator/backup --accept-terms-of-use
 
 [Install]
 WantedBy=multi-user.target

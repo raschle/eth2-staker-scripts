@@ -23,6 +23,7 @@ Copy the file "keystore-*.json" to "~/validator_keys"
 sudo chown -R <your_username>:<your_username> /var/lib/prysm/validator
 /usr/local/bin/validator accounts import --keys-dir=$HOME/validator_keys --wallet-dir=/var/lib/prysm/validator
 echo "your_wallet_password" > /var/lib/prysm/validator/unicorn
+history -c
 ```
 
 After importing the keys, configure validator and install monitoring:
