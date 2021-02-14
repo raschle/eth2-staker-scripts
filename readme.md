@@ -66,3 +66,5 @@ geth attach http://127.0.0.1:8545
 http://yourserverip:3000
 
 https://docs.prylabs.network/assets/grafana-dashboards/small_amount_validators.json
+https://grafana.com/grafana/dashboards/1860
+https://gist.githubusercontent.com/karalabe/e7ca79abdec54755ceae09c08bd090cd/raw/3a400ab90f9402f2233280afd086cb9d6aac2111/dashboard.json
